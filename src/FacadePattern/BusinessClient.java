@@ -15,9 +15,7 @@ public class BusinessClient {
         StringBuilder sb = new StringBuilder();
         sb.append(name).append(" has arrived.\n");
         sb.append(reception.orderRoomService()).append("\n");
-        sb.append(reception.callCleaningService()).append("\n");
         sb.append(reception.requestTaxiService()).append("\n");
-        sb.append(name).append(" enjoyed their stay!");
         return sb.toString();
     }
 }

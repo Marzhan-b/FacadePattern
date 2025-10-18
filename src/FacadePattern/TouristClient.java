@@ -15,7 +15,7 @@ public class TouristClient {
         sb.append(facade.orderRoomService()).append("\n");
         sb.append(facade.callCleaningService()).append("\n");
         sb.append(facade.requestTaxiService()).append("\n");
-        sb.append(name).append(" enjoyed their stay!");
+        sb.append(facade.bookSpaService()).append("\n");
         return sb.toString();
     }
 }

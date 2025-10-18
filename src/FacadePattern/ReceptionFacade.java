@@ -78,17 +78,20 @@ public class ReceptionFacade {
         return cleaningService.performService();
     }
 
-    public String bookSpaService() { return spaService.performService(); }
-    public String requestTaxiService() { return taxiService.performService(); }
-
-    public void startHotelDay() {
-        StringBuilder result = new StringBuilder();
-        result.append(nameHotel).append(": ").append(startMessage).append("\n");
-        result.append(orderRoomService()).append("\n");
-        result.append(callCleaningService()).append("\n");
-        result.append(bookSpaService()).append("\n");
-        result.append(requestTaxiService()).append("\n");
-        result.append(nameHotel).append(": ").append(endMessage);
-        System.out.println(result.toString());
+    public String bookSpaService() {
+        return spaService.performService();
     }
+    public String requestTaxiService() {
+        return taxiService.performService();
+    }
+
+    public void serveClients(TouristClient tourist, BusinessClient business) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Serving clients at ").append(nameHotel).append(":\n\n");
+        sb.append(tourist.useServices()).append("\n\n");
+        sb.append(business.useServices()).append("\n");
+        sb.append("All clients have been served successfully!");
+        System.out.println(sb.toString());
+    }
+
 }
