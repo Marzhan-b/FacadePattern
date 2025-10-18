@@ -86,12 +86,14 @@ public class ReceptionFacade {
     }
 
     public void serveClients(TouristClient tourist, BusinessClient business) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Serving clients at ").append(nameHotel).append(":\n\n");
-        sb.append(tourist.useServices()).append("\n\n");
-        sb.append(business.useServices()).append("\n");
-        sb.append("All clients have been served successfully!");
-        System.out.println(sb.toString());
+        String message =
+                "Serving clients at " + nameHotel + ":\n\n" +
+                        tourist.useServices() + "\n\n" +
+                        business.useServices() + "\n" +
+                        "All clients have been served successfully!";
+
+        System.out.println(message);
     }
+
 
 }
