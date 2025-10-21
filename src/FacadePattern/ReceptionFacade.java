@@ -1,5 +1,12 @@
 package FacadePattern;
 
+import FacadePattern.clients.BusinessClient;
+import FacadePattern.clients.TouristClient;
+import FacadePattern.services.CleaningService;
+import FacadePattern.services.RoomService;
+import FacadePattern.services.SpaService;
+import FacadePattern.services.TaxiService;
+
 public class ReceptionFacade {
     private String nameHotel;
     private String startMessage;
@@ -88,7 +95,7 @@ public class ReceptionFacade {
     public void serveClients(TouristClient tourist, BusinessClient business) {
         String message =
                 "Serving clients at " + nameHotel + ":\n\n" +
-                        tourist.useServices() + "\n\n" +
+                        tourist.useServices() + "\n" +
                         business.useServices() + "\n" +
                         "All clients have been served successfully!";
 

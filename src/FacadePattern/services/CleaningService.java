@@ -1,4 +1,6 @@
-package FacadePattern;
+package FacadePattern.services;
+
+import FacadePattern.IEleonHotel;
 
 public class CleaningService implements IEleonHotel {
     private String serviceName;

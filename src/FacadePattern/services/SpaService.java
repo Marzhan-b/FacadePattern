@@ -1,12 +1,14 @@
-package FacadePattern;
+package FacadePattern.services;
 
-public class RoomService implements IEleonHotel {
+import FacadePattern.IEleonHotel;
+
+public class SpaService implements IEleonHotel {
     private String serviceName;
     private String serviceAction;
 
-    public RoomService() {
-        this.serviceName = "Room Service";
-        this.serviceAction = "The dinner is in your room,Bon appetit!";
+    public SpaService() {
+        this.serviceName = "Spa Service";
+        this.serviceAction = "3 types of massage and jakuzzi ";
     }
 
     public String getServiceName() {

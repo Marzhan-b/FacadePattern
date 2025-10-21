@@ -1,4 +1,6 @@
 import FacadePattern.*;
+import FacadePattern.clients.BusinessClient;
+import FacadePattern.clients.TouristClient;
 
 
 public class Main {
